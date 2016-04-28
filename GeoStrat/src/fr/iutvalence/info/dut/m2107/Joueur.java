@@ -19,4 +19,4 @@ public class Joueur {
 	 */
 	private char color;
 	
-}
+} 
