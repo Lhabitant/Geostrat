@@ -9,7 +9,7 @@ package fr.iutvalence.info.dut.m2107;
  */
 public class Unite {
 
-	/**
+	/** 
 	 * the name of a unite
 	 */
 	private char name;
@@ -48,7 +48,7 @@ public class Unite {
 	 * is a unite wait  
 	 */
 	private boolean etatAttente;
-	
+	 
 	
 	
 	/**

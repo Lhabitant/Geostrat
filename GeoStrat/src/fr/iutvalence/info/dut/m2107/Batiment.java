@@ -12,7 +12,7 @@ public class Batiment {
 	/**
 	 * The color is use for identify the batiment and the player who have the batiment
 	 */
-	protected int color;
+	protected int color; 
 	
 	/**
 	 * delete a batiment
@@ -22,7 +22,7 @@ public class Batiment {
 		
 	}
 
-	/**
+	/** 
 	 * 
 	 * @return color
 	 */
