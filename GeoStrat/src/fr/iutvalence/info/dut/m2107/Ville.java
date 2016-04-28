@@ -8,5 +8,12 @@ package fr.iutvalence.info.dut.m2107;
  *
  */
 public class Ville {
-
+	
+	/**
+	 * for get money
+	 */
+	public void loyer()
+	{
+		
+	}
 }
