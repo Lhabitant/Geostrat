@@ -5,7 +5,7 @@ package fr.iutvalence.info.dut.m2107;
 
 /**
  * 
- * @author fluchaiv
+ * @author Fluchaire
  */
 public class Partie
 {
