@@ -5,7 +5,7 @@ package fr.iutvalence.info.dut.m2107;
 
 /**
  * 
- * @author fluchaiv
+ * @author Fluchaire
  */
 public class ressource extends Case
 {
@@ -15,7 +15,7 @@ public class ressource extends Case
 	private int sommeRapporte;
 
 	/**
-	 * @return the sommeRapporte
+	 * @return sommeRapporte
 	 */
 	public int getSommeRapporte()
 	{

@@ -4,8 +4,8 @@
 package fr.iutvalence.info.dut.m2107;
 
 /**
- * @author lecomtel
- *
+ * @author Lecomte
+ * Test Clement
  */
 public class Batiment {
 
