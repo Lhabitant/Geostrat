@@ -14,7 +14,7 @@ public class MenuAccueil {
 	 */
 	protected GeoStrat geostrat;
 	
-	/**
+	/** 
 	 * this method is use to make a aggregation with  GeoStrat
 	 */
 	public MenuAccueil()

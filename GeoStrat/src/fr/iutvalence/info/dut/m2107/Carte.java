@@ -19,7 +19,7 @@ class Carte
 	 */
 	public Carte()
 	{
-		this.partie = new Partie();
+		this.partie = new Partie(); 
 		this.partie.setCarte(this);
 	}
 	

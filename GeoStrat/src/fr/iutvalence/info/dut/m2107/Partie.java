@@ -43,7 +43,7 @@ public class Partie
 	}
 	
 	/**
-	 * 
+	 *  
 	 */
 	public void finirLaPartie()
 	{

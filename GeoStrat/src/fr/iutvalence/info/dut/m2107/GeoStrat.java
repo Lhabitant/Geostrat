@@ -17,7 +17,7 @@ public class GeoStrat {
 	/**
 	 *  this method is use to make a aggregation with  menuaccueil
 	 * @return  menuaccueil
-	 */
+	 */ 
 	public MenuAccueil getMenuAccueil()
 	{
 		return menuaccueil;
