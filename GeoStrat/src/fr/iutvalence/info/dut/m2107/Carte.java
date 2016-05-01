@@ -23,6 +23,29 @@ class Carte
 		this.partie.setCarte(this);
 	}
 	
+	/**
+	 * this attribut is use to make a aggregation with case
+	 */
+	protected Case tile;
+	
+	/**
+	 *  this method is use to make a aggregation with  carte
+	 * @return  carte
+	 */
+	public Case getCase()
+	{
+		return tile;
+
+	}
+	/**
+	 * this method is use to make a aggregation with Case
+	 * @param Case
+	 */
+	public void setCarte(Case tile) 
+	{
+		this.tile = tile;
+	}
+	
 	
 	 
 	

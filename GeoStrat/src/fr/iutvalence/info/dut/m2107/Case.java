@@ -10,6 +10,22 @@ package fr.iutvalence.info.dut.m2107;
 public class Case
 {
 	/**
+	 * this attribut is use to make a aggregation with Carte
+	 */
+	protected Carte carte;
+	
+	/**
+	 * this method is use to make a aggregation with Carte
+	 */
+	public Case()
+	{
+		this.carte = new Carte(); 
+		this.carte.setCase(this);
+	}
+	
+	
+	
+	/**
 	 * 
 	 */
 	private int nombreDePointsDeDeplacementQuiSontConsommes;
