@@ -19,7 +19,9 @@ public class Case
 	 */
 	public Case()
 	{
-		this.carte = new Carte(); 
+		this.carte = new Carte();
+		this.carte.setCarte(this); // Il faut crée la carte avant non ?
+		// (TODO) Need correction
 		this.carte.setCase(this);
 	}
 	
