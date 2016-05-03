@@ -49,6 +49,20 @@ public class Unite {
 	 */
 	private boolean etatAttente;
 	 
+	/**
+	 * this attribut is use to make a composition with DetailleUnite 
+	 */
+	protected DetailleUnite detailleUnite;
+
+	public DetailleUnite getDetailleUnite() {
+		return detailleUnite;
+	}
+
+	public void setDetailleUnite(DetailleUnite detailleUnite)
+	{
+		this.detailleUnite = detailleUnite;
+		detailleUnite.setUnite(this);
+	}	
 	
 	
 	/**

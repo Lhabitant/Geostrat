@@ -10,6 +10,20 @@ package fr.iutvalence.info.dut.m2107;
 public class Case
 {
 	/**
+	 * size of terrain in Y
+	 */
+	private final int LARGEUR;
+	/**
+	 * size of terrain in X
+	 */
+	private final int LONGUEUR;
+	
+	/**
+	 * is use for play a game and put unite of this (a refaire?)
+	 */
+	protected int[][] terrain;
+	
+	/**
 	 * this attribut is use to make a aggregation with Carte
 	 */
 	protected Carte carte;
@@ -19,6 +33,22 @@ public class Case
 	 */
 	public Case()
 	{
+		LARGEUR = 20;
+		LONGUEUR = 20;
+		int x = 0;
+		int y = 0;
+		while(x < LONGUEUR)
+		{
+			y = 0;
+			while(y <LARGEUR )
+			{
+				terrain[LONGUEUR][LARGEUR] = 0;
+				y++;
+			}
+			x++;
+		}
+		
+		this.terrain = new int [LONGUEUR][LARGEUR];
 		this.carte = new Carte();
 		this.carte.setCarte(this); // Il faut crée la carte avant non ?
 		// (TODO) Need correction
