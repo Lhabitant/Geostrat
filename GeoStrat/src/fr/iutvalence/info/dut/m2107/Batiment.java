@@ -7,7 +7,7 @@ package fr.iutvalence.info.dut.m2107;
  * @author Lecomte
  * Test Clement
  */
-public class Batiment {
+public class Batiment extends Carte{
 
 	/**
 	 * The color is use for identify the batiment and the player who have the batiment
