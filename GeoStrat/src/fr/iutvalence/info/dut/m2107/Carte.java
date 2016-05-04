@@ -3,6 +3,8 @@
  */
 package fr.iutvalence.info.dut.m2107;
 
+
+
 /**
  * 
  * @author Fluchaire
@@ -21,7 +23,6 @@ class Carte
 	/**
 	 * this method is use to make a aggregation with  Partie
 	 */
-	
 	public Carte()
 	{
 		this.partie = new Partie(); 
