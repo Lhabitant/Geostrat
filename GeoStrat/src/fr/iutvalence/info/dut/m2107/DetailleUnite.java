@@ -13,7 +13,11 @@ public class DetailleUnite {
 	 * this attribut is use to make a composition with interface utilisateur
 	 */
 	protected InterfaceUtilisateur interfaceUtilisateur;
-
+	
+	/**
+	 * this attribut is use to make a composition with interface utilisateur
+	 */
+	protected Unite unite;
 	/**
 	 * this method is use to make a composition with InterfaceUtilisateur
 	 * @return interfaceUtilisateur
@@ -31,6 +35,21 @@ public class DetailleUnite {
 		interfaceUtilisateur.setDetailleUnite(this);
 	}
 	
+	/**
+	 * this method is use to make a composition with Unite
+	 * @return unite
+	 */
+	public Unite getUnite() {
+		return unite;
+	}
+	
+	/**
+	 * this method is use to make a composition with Unite
+	 * @param unite
+	 */
+	public void setUnite(Unite unite) {
+		this.unite = unite;
+	}
 	
 	
 	/**
