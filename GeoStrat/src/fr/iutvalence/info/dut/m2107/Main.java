@@ -6,7 +6,7 @@ package fr.iutvalence.info.dut.m2107;
  */
 public class Main 
 {
-	/**
+	/** 
 	 * @param args
 	 */
 	public static void main(String[] args)

@@ -68,7 +68,7 @@ public class InterfaceUtilisateur extends JFrame {
 	 * this method is use to make a window
 	 */
 	public InterfaceUtilisateur()
-	{
+	{ 
 		// name of window 
 		this.setTitle("GeoStrat");
 		// This of window X,Y
