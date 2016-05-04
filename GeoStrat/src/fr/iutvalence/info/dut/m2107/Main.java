@@ -12,7 +12,7 @@ public class Main
 	public static void main(String[] args)
 		{
 		 InterfaceUtilisateur win = new InterfaceUtilisateur();
-		}
+		} 
 	
 //C'est un TEST pour savoir si je peux modif wowow !
 }
