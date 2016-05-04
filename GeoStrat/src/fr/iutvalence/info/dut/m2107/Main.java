@@ -13,6 +13,6 @@ public class Main
 		{
 		 InterfaceUtilisateur win = new InterfaceUtilisateur();
 		} 
-	
+	 
 //C'est un TEST pour savoir si je peux modif wowow !
 }

@@ -59,7 +59,7 @@ public class InterfaceUtilisateur extends JFrame {
 		this.detailleUnite = detailleUnite;
 	}
 	
-	
+	 
 	
 //*******************************************************************************************
 //!\\ User Iterface in construction //!\\
