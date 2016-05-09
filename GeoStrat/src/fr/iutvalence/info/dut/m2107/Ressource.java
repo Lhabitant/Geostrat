@@ -7,7 +7,7 @@ package fr.iutvalence.info.dut.m2107;
  * 
  * @author Fluchaire
  */
-public class ressource extends Case
+public class Ressource extends Case
 {
 	/**
 	 * 
@@ -19,7 +19,7 @@ public class ressource extends Case
 	 */
 	public int getSommeRapporte()
 	{
-		return sommeRapporte;
+		return this.sommeRapporte;
 	}
 
 	/**
