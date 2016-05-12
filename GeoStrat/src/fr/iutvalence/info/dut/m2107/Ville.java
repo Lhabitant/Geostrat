@@ -1,20 +1,10 @@
-/**
- * 
- */
 package fr.iutvalence.info.dut.m2107;
 
-/**
- * @author Lecomte
- *
- */
-public class Ville extends Batiment{
-	
-	/**
-	 * for get money
-	 */
-	public void loyer()
-	{
-		
+public class Ville extends Batiment {
+
+	public void loyer() {
+		// TODO - implement Ville.loyer
+		throw new UnsupportedOperationException();
 	}
+
 }
- 

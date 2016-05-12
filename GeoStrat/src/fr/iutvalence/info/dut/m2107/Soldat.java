@@ -1,11 +1,10 @@
 package fr.iutvalence.info.dut.m2107;
 
-/**
- * 
- * @author Lecomte
- *
- */
-public class Soldat extends Unite
-{
- 
+public class Soldat extends Unite {
+
+	public void capturer() {
+		// TODO - implement Soldat.capturer
+		throw new UnsupportedOperationException();
+	}
+
 }

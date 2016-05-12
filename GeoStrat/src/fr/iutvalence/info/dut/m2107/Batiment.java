@@ -1,42 +1,15 @@
-/**
- * 
- */
 package fr.iutvalence.info.dut.m2107;
 
-/**
- * @author Lecomte
- * Test Clement
- */
-public class Batiment extends Carte{
+public class Batiment extends Case {
 
-	/**
-	 * The color is use for identify the batiment and the player who have the batiment
-	 */
-	protected int color; 
-	
-	/**
-	 * delete a batiment
-	 */
-	public void Supprimer() 
-	{
-		
+	public void supprimer() {
+		// TODO - implement Batiment.supprimer
+		throw new UnsupportedOperationException();
 	}
 
-	/** 
-	 * 
-	 * @return color
-	 */
-	public int getColor()
-	{
-		return color;
-		
+	public void changerJoueur() {
+		// TODO - implement Batiment.changerJoueur
+		throw new UnsupportedOperationException();
 	}
-	
-	/**
-	 * change the color of a batiment
-	 */
-	public void changerCouleur()
-	{
-		
-	}
+
 }

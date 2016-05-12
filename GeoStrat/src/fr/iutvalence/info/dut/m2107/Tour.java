@@ -1,20 +1,16 @@
-/**
- * 
- */
 package fr.iutvalence.info.dut.m2107;
 
-/**
- * 
- * @author Fluchaire
- */
-public class Tour
-{
-	/**
-	 * Method for end a turn
-	 */
-	public void changementTour()
-	{
-		
+public class Tour {
+
+	private int tour;
+
+	public int getTour() {
+		return this.tour;
+	}
+
+	public void changementDeTour() {
+		// TODO - implement Tour.changementDeTour
+		throw new UnsupportedOperationException();
 	}
 
 }

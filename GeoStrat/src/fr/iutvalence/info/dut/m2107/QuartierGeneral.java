@@ -1,20 +1,10 @@
-/**
- * 
- */
 package fr.iutvalence.info.dut.m2107;
 
-/**
- * @author Lecomte
- *
- */
 public class QuartierGeneral extends Batiment {
-	
-	/**
-	 * for win a game
-	 */
-	public void estCapturer()
-	{
-		
+
+	public void estCapturer() {
+		// TODO - implement QuartierGeneral.estCapturer
+		throw new UnsupportedOperationException();
 	}
+
 }
- 
