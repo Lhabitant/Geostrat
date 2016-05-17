@@ -14,7 +14,7 @@ import java.io.IOException;
 
 /**
  * 
- * @author Aliot
+ * @author Lecomte Loïc
  *
  */
 public class InterfaceUtilisateurEnJeu extends JPanel
@@ -31,13 +31,21 @@ private int posX = -50;
 private int posY = -50;
 
  public void paintComponent(Graphics g){
+	   //color of rect of oval
+	    g.setColor(Color.white);
+	    //size of rect of oval
+	    g.fillRect(0,0,this.getWidth(),this.getHeight()-50);
+	    
+	    // color of oval
 	    g.setColor(Color.red);
+	    //the oval
 	    g.fillOval(posX, posY, 50, 50);
+	    
 	    try {
 
 	        Image img = ImageIO.read(new File("doge.jpeg"));
 
-	        g.drawImage(img, 0, 0, this);
+	       // g.drawImage(img, 0, 0, this);
 
 	        //Pour une image de fond
 
@@ -50,6 +58,9 @@ private int posY = -50;
 	      }    
 	  }
   
+ 
+ 
+ // use for the oval
  public int getPosX() {
 	    return posX;
 	  }

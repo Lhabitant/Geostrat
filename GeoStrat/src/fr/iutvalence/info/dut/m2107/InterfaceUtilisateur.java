@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 
 import java.awt.Color; 
 import java.awt.Graphics;
+import java.awt.Panel;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -38,35 +39,62 @@ public class InterfaceUtilisateur extends JFrame {
 	    //we can see the window
 	    this.setVisible(true);
 	    
-	    //new instace of Jpanel
-	    // JPanel pan = new JPanel();
+	    //new instance of panel
+	    //Panel pan = new Panel();
+	    pan.setLayout(null);
 	    //Background color
 	    setBackground(Color.GREEN);        
 	    // prevent Jframe that Jpanel will be content panel
 	    this.setContentPane(pan);               
 	    this.setVisible(false);
 	    
-	    // create a new button
-	    JButton bouton = new JButton();
-	    bouton.setText("Mon bouton");
+	    // create a new button with the class Bouton
+	    JButton bouton = new Bouton("test");
 	    
 	    //add the button on the screen
 	    pan.add(bouton);
 	    this.setContentPane(pan);
 	    this.setVisible(true);
+	    //postion of a buttom (here bouton) (x,y,longueur,largueur)
+	    bouton.setBounds(0, this.getHeight()-80, 100, 50);
 	    go();
 	}
 
 	 private void go()
 	 {
-		    for(int i = -50; i < pan.getWidth(); i++)
+		 int x = pan.getPosX(), y = pan.getPosY();
+		 boolean backX = false;
+		 boolean backY = false;
+		  
+		 while(true)
 		    {
-		      int x = pan.getPosX(), y = pan.getPosY();
-		      x++;
-		      y++;
-		      pan.setPosX(x);
-		      pan.setPosY(y);
-		      pan.repaint();  
+			 	if(x <1)
+			 	{
+			 		backX = false;	
+			 	}
+			 	if (y < 1)
+			 	{
+			 		backY = false;
+			 	}
+			 	if (x == pan.getWidth()-50)
+			    {
+			 		backX = true;
+			    }
+			    if( y == pan.getHeight()-100)
+			    {
+			    	backY = true;	  
+			    }
+			    
+			    if(!backX)
+			        pan.setPosX(++x);
+			      else
+			        pan.setPosX(--x);
+			    if(!backY)
+			        pan.setPosY(++y);
+			      else
+			        pan.setPosY(--y);
+
+			      pan.repaint();  
 		      try
 		      {
 		        Thread.sleep(10);
@@ -75,6 +103,8 @@ public class InterfaceUtilisateur extends JFrame {
 		      {
 		        e.printStackTrace();
 		      }
+		    
+		      System.out.println(x);
 		    }
 	 }
 	
