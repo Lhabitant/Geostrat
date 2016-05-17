@@ -28,7 +28,7 @@ private int Resolution;
 //*******************************************************************************************	
 
 private int posX = -50;
-private int posY = -50;
+private int posY = -50; 
 
  public void paintComponent(Graphics g){
 	   //color of rect of oval

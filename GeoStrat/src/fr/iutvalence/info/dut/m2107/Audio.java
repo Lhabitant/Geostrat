@@ -25,7 +25,7 @@ public class Audio extends Thread {
     }
      
     public void arreter()
-    {
+    { 
         sound.stop();
     }
 }

@@ -50,7 +50,7 @@ public class InterfaceUtilisateur extends JFrame {
 	    
 	    // create a new button with the class Bouton
 	    JButton bouton = new Bouton("test");
-	    
+	     
 	    //add the button on the screen
 	    pan.add(bouton);
 	    this.setContentPane(pan);
