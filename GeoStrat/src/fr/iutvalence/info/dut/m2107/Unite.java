@@ -26,7 +26,7 @@ public class Unite {
 		throw new UnsupportedOperationException();
 	}
 
-	public void attasuer() {
+	public void attaquer() {
 		// TODO - implement Unite.attasuer
 		throw new UnsupportedOperationException();
 	}
