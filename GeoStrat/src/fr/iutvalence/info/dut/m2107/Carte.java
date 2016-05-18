@@ -1,6 +1,8 @@
 package fr.iutvalence.info.dut.m2107;
 
 public class Carte {
+	
+	protected int[][] arene;
 
 	public void creer() {
 		// TODO - implement Carte.creer
