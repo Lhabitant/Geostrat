@@ -21,17 +21,21 @@ public class InterfaceUtilisateur extends JFrame {
 //!\\ User Interface in construction //!\\
 //*******************************************************************************************	
 	private InterfaceUtilisateurEnJeu pan = new InterfaceUtilisateurEnJeu();
+	
+	private final int RESX = 1200;
+	private final int RESY = 700;
 		
 	/**
 	 * this method is use to make a window
 	 */
 	public InterfaceUtilisateur()
 	{ 
+
 		// name of window 
 		this.setTitle("GeoStrat");
 		// This of window X,Y
 		//TODO use variable X and Y
-	    this.setSize(400, 500);
+	    this.setSize(RESX, RESY );
 	    // position of window (center)
 	    this.setLocationRelativeTo(null);
 	    //stop the programm when we close the window
@@ -72,7 +76,7 @@ public class InterfaceUtilisateur extends JFrame {
 			 	{
 			 		backX = false;	
 			 	}
-			 	if (y < 1)
+			 	if (y < 20)
 			 	{
 			 		backY = false;
 			 	}
@@ -80,7 +84,7 @@ public class InterfaceUtilisateur extends JFrame {
 			    {
 			 		backX = true;
 			    }
-			    if( y == pan.getHeight()-100)
+			    if( y == pan.getHeight()-250)
 			    {
 			    	backY = true;	  
 			    }

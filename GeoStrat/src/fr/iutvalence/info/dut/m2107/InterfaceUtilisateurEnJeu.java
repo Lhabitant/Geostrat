@@ -34,7 +34,10 @@ private int posY = -50;
 	   //color of rect of oval
 	    g.setColor(Color.white);
 	    //size of rect of oval
-	    g.fillRect(0,0,this.getWidth(),this.getHeight()-50);
+	    g.fillRect(0,20,this.getWidth(),this.getHeight()-200);
+	    
+	    g.setColor(Color.DARK_GRAY);
+	    g.fillRect(700,600,this.getWidth(),this.getHeight());
 	    
 	    // color of oval
 	    g.setColor(Color.red);
