@@ -2,12 +2,14 @@ package fr.iutvalence.info.dut.m2107;
 
 import javax.swing.JFrame;
 
+import java.awt.BorderLayout;
 import java.awt.Color; 
 import java.awt.Graphics;
 import java.awt.Panel;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -21,6 +23,11 @@ public class InterfaceUtilisateur extends JFrame {
 //!\\ User Interface in construction //!\\
 //*******************************************************************************************	
 	private InterfaceUtilisateurEnJeu pan = new InterfaceUtilisateurEnJeu();
+	private JPanel container = new JPanel();
+	// we create a new JLabel
+    JLabel label = new JLabel("Mon premier JLabel");
+    // create a new button with the class Bouton
+    JButton bouton = new Bouton("test");
 	
 	private final int RESX = 1200;
 	private final int RESY = 700;
@@ -51,9 +58,6 @@ public class InterfaceUtilisateur extends JFrame {
 	    // prevent Jframe that Jpanel will be content panel
 	    this.setContentPane(pan);               
 	    this.setVisible(false);
-	    
-	    // create a new button with the class Bouton
-	    JButton bouton = new Bouton("test");
 	     
 	    //add the button on the screen
 	    pan.add(bouton);
@@ -61,9 +65,17 @@ public class InterfaceUtilisateur extends JFrame {
 	    this.setVisible(true);
 	    //postion of a buttom (here bouton) (x,y,longueur,largueur)
 	    bouton.setBounds(0, this.getHeight()-80, 100, 50);
+	    // position of a Label
+	    container.add(label, BorderLayout.NORTH);
 	    go();
+	    
+	    
 	}
 
+	
+	
+	
+	
 	 private void go()
 	 {
 		 int x = pan.getPosX(), y = pan.getPosY();
@@ -107,8 +119,6 @@ public class InterfaceUtilisateur extends JFrame {
 		      {
 		        e.printStackTrace();
 		      }
-		    
-		      System.out.println(x);
 		    }
 	 }
 	

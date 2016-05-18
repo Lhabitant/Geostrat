@@ -37,7 +37,7 @@ private int posY = -50;
 	    g.fillRect(0,20,this.getWidth(),this.getHeight()-200);
 	    
 	    g.setColor(Color.DARK_GRAY);
-	    g.fillRect(700,600,this.getWidth(),this.getHeight());
+	    g.fillRect(900,485,this.getWidth(),this.getHeight());
 	    
 	    // color of oval
 	    g.setColor(Color.red);
