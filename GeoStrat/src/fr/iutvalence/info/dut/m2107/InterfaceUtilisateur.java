@@ -6,7 +6,7 @@ import java.awt.BorderLayout;
 import java.awt.Color; 
 import java.awt.Graphics;
 import java.awt.Panel;
-
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -16,7 +16,8 @@ import javax.swing.JPanel;
  * @author Lecomte Loïc
  *
  */
-public class InterfaceUtilisateur extends JFrame {	
+// a error, i don't know why, but well it's work
+public class InterfaceUtilisateur extends JFrame implements ActionListener {	
 
 	
 //*******************************************************************************************
@@ -25,13 +26,20 @@ public class InterfaceUtilisateur extends JFrame {
 	private InterfaceUtilisateurEnJeu pan = new InterfaceUtilisateurEnJeu();
 	private JPanel container = new JPanel();
 	// we create a new JLabel
-    JLabel label = new JLabel("Mon premier JLabel");
+    JLabel label = new JLabel("JLabel");
     // create a new button with the class Bouton
-    JButton bouton = new Bouton("test");
-	
+    JButton boutonEnd = new JButton(new EndTurnAction("Fin de tour"));
+    JButton bouton1 = new JButton(new Action1("bouton1"));
 	private final int RESX = 1200;
 	private final int RESY = 700;
-		
+	
+	private final int LENDBUT = 150;
+	private final int lENDBUT = 50;
+	private final int ENDBUTX = 1025;
+	private final int ENDBUTY = 500;
+	private final int BUTX = 1025;
+	private final int BUTY = 560;
+	
 	/**
 	 * this method is use to make a window
 	 */
@@ -41,7 +49,6 @@ public class InterfaceUtilisateur extends JFrame {
 		// name of window 
 		this.setTitle("GeoStrat");
 		// This of window X,Y
-		//TODO use variable X and Y
 	    this.setSize(RESX, RESY );
 	    // position of window (center)
 	    this.setLocationRelativeTo(null);
@@ -50,26 +57,31 @@ public class InterfaceUtilisateur extends JFrame {
 	    //we can see the window
 	    this.setVisible(true);
 	    
-	    //new instance of panel
-	    //Panel pan = new Panel();
-	    pan.setLayout(null);
-	    //Background color
-	    setBackground(Color.GREEN);        
-	    // prevent Jframe that Jpanel will be content panel
-	    this.setContentPane(pan);               
-	    this.setVisible(false);
-	     
-	    //add the button on the screen
-	    pan.add(bouton);
+	    this.setLocationRelativeTo(null);
+
+	    container.setBackground(Color.blue);
+	    container.setLayout(new BorderLayout());
+	    container.add(pan, BorderLayout.CENTER);
+	    container.add(bouton1, BorderLayout.SOUTH);
+	    container.add(label, BorderLayout.EAST);
+	    //add the button "fin de tour" on the screen
+	    pan.add(boutonEnd);
+	    //add the button "bouton1" on the screen
+	    pan.add(bouton1);
+	    
+	    container.setLayout(new BorderLayout());
+	    
 	    this.setContentPane(pan);
 	    this.setVisible(true);
-	    //postion of a buttom (here bouton) (x,y,longueur,largueur)
-	    bouton.setBounds(0, this.getHeight()-80, 100, 50);
+	    
+	    //postion of end turn buttom (here bouton) (x,y,longueur,largueur)
+	    boutonEnd.setBounds(ENDBUTX, ENDBUTY, LENDBUT,  lENDBUT);
+	    bouton1.setBounds(BUTX, BUTY, LENDBUT,  lENDBUT);
 	    // position of a Label
 	    container.add(label, BorderLayout.NORTH);
 	    go();
 	    
-	    
+	
 	}
 
 	

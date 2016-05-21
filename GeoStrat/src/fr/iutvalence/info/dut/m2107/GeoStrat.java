@@ -5,7 +5,7 @@ public class GeoStrat {
 	public static void main(String[] args) {
 		
 		InterfaceUtilisateur win = new InterfaceUtilisateur();
-		Audio son = new Audio();
+		Audio son = new Audio("src/music/music_1.wav");
 
 	}
 
