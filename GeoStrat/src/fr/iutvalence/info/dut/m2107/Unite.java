@@ -10,7 +10,15 @@ public class Unite {
 	private int statDef;
 	private boolean EtatAttente;
 	private int pDV;
-
+	
+	
+	public void Unite1()
+	{
+		this.Nom = "SoldatDeBase";
+		this.prix = 0;
+		this.pDV = 10;
+	}
+	
 	public int getNumero() {
 		// TODO - implement Unite.getNumero
 		
