@@ -2,9 +2,11 @@ package fr.iutvalence.info.dut.m2107;
 
 public class Carte {
 	
-	protected int[][] arene;
-
-	public void creer() {
+	protected Case[][] map;
+	
+	
+	public void creer() 
+	{
 		// TODO - implement Carte.creer
 		throw new UnsupportedOperationException();
 	}

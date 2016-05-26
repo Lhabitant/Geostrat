@@ -2,22 +2,17 @@ package fr.iutvalence.info.dut.m2107;
 
 public class Unite {
 
-	private String Nom;
-	private int numeroUnite;
-	private int prix;
-	private int statDepla;
-	private int statAtt;
-	private int statDef;
-	private boolean EtatAttente;
-	private int pDV;
+	protected String Nom;
+	protected int numeroUnite;
+	protected int prix;
+	protected int statDepla;
+	protected int statAtt;
+	protected int statDef;
+	protected boolean EtatAttente;
+	protected int pDV;
 	
 	
-	public void Unite1()
-	{
-		this.Nom = "SoldatDeBase";
-		this.prix = 0;
-		this.pDV = 10;
-	}
+
 	
 	public int getNumero() {
 		// TODO - implement Unite.getNumero
