@@ -59,7 +59,7 @@ public void paintComponent(Graphics g){
 	 	 */
 	 	//color of rect of oval
 	  //  g.setColor(Color.white);
-	    //size of rect of oval
+ 	    //size of rect of oval
 	   //  g.fillRect(REALRECTX,REALRECTY,this.getWidth(),this.getHeight()-200);
 	    
 	    /**

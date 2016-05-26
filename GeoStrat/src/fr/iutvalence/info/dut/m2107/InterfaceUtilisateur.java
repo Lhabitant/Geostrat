@@ -69,7 +69,7 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener {
 
 	    //add the button "fin de tour" on the screen
 	    pan.add(boutonEnd);
-	    //add the button "bouton1" on the screen
+	    //add the button "bouton1" on the screen 
 	    pan.add(bouton1);
 	    // permet de fixer les boutons
 	    pan.setLayout(null);
