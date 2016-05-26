@@ -6,7 +6,9 @@ import java.awt.BorderLayout;
 import java.awt.Color; 
 import java.awt.Graphics;
 import java.awt.Panel;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -133,6 +135,17 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener {
 		      }
 		    }
 	 }
+
+
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent arg0)
+	{
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	
