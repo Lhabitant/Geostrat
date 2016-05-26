@@ -21,7 +21,8 @@ public class GeoStrat {
         Joueur Joueur = new Joueur(joueur1, sc);
 		
 		InterfaceUtilisateur win = new InterfaceUtilisateur();
-		Audio son = new Audio("src/music/music_1.wav");
+		Audio son = new Audio(null);
+
 
 	}
 

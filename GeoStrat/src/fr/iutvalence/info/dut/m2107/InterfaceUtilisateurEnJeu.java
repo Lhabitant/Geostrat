@@ -58,9 +58,9 @@ public void paintComponent(Graphics g){
 	 	 * It's the "real" map
 	 	 */
 	 	//color of rect of oval
-	    g.setColor(Color.white);
-	    //size of rect of oval
-	    g.fillRect(REALRECTX,REALRECTY,this.getWidth(),this.getHeight()-200);
+	  //  g.setColor(Color.white);
+ 	    //size of rect of oval
+	   //  g.fillRect(REALRECTX,REALRECTY,this.getWidth(),this.getHeight()-200);
 	    
 	    /**
 	     * it's all unit info's rect
@@ -110,7 +110,8 @@ public void paintComponent(Graphics g){
   
  
  
- // use for the oval
+ // use for the oval, but no use at all
+/*
  public int getPosX() {
 	    return posX;
 	  }
@@ -126,5 +127,5 @@ public void paintComponent(Graphics g){
  public void setPosY(int posY) {
 	    this.posY = posY;
 	  }        
-
+*/
 }

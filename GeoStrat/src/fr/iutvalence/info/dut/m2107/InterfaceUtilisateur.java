@@ -13,6 +13,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 
 /**
  * @author Lecomte Loïc
@@ -32,6 +34,7 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener {
     // create a new button with the class Bouton
     JButton boutonEnd = new JButton(new EndTurnAction("Fin de tour"));
     JButton bouton1 = new JButton(new Action1("bouton1"));
+    
 	private final int RESX = 1200;
 	private final int RESY = 700;
 	
@@ -42,12 +45,15 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener {
 	private final int BUTX = 1025;
 	private final int BUTY = 560;
 	
+
+
+   
 	/**
 	 * this method is use to make a window
 	 */
 	public InterfaceUtilisateur()
 	{ 
-
+	  
 		// name of window 
 		this.setTitle("GeoStrat");
 		// This of window X,Y
@@ -61,16 +67,12 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener {
 	    
 	    this.setLocationRelativeTo(null);
 
-	    container.setBackground(Color.blue);
-	    container.setLayout(new BorderLayout());
-	    container.add(pan, BorderLayout.CENTER);
-	    container.add(bouton1, BorderLayout.SOUTH);
-	    container.add(label, BorderLayout.EAST);
 	    //add the button "fin de tour" on the screen
 	    pan.add(boutonEnd);
-	    //add the button "bouton1" on the screen
+	    //add the button "bouton1" on the screen 
 	    pan.add(bouton1);
-	    
+	    // permet de fixer les boutons
+	    pan.setLayout(null);
 	    container.setLayout(new BorderLayout());
 	    
 	    this.setContentPane(pan);
@@ -81,74 +83,48 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener {
 	    bouton1.setBounds(BUTX, BUTY, LENDBUT,  lENDBUT);
 	    // position of a Label
 	    container.add(label, BorderLayout.NORTH);
-	    go();
+	    //go();
+	    
+	    
+	    
+	    Object[][] data = {
+
+	    	      {"Cysboy", "28 ans", "1.80 m"},
+
+	    	      {"BZHHydde", "28 ans", "1.80 m"},
+
+	    	      {"IamBow", "24 ans", "1.90 m"},
+
+	    	      {"FunMan", "32 ans", "1.85 m"}
+
+	    	    };
+
+
+	    	    //Les titres des colonnes
+
+	    	    String  title[] = {"Pseudo", "Age", "Taille"};
+
+	    	    JTable tableau = new JTable(data, title);
+
+	    	    //Nous ajoutons notre tableau à notre contentPane dans un scroll
+
+	    	    //Sinon les titres des colonnes ne s'afficheront pas !
+
+	    	    this.getContentPane().add(new JScrollPane(tableau));
+	    
 	    
 	
 	}
-
-	
-	
-	
-	
-	 private void go()
-	 {
-		 int x = pan.getPosX(), y = pan.getPosY();
-		 boolean backX = false;
-		 boolean backY = false;
-		  
-		 while(true)
-		    {
-			 	if(x <1)
-			 	{
-			 		backX = false;	
-			 	}
-			 	if (y < 20)
-			 	{
-			 		backY = false;
-			 	}
-			 	if (x == pan.getWidth()-50)
-			    {
-			 		backX = true;
-			    }
-			    if( y == pan.getHeight()-250)
-			    {
-			    	backY = true;	  
-			    }
-			    
-			    if(!backX)
-			        pan.setPosX(++x);
-			      else
-			        pan.setPosX(--x);
-			    if(!backY)
-			        pan.setPosY(++y);
-			      else
-			        pan.setPosY(--y);
-
-			      pan.repaint();  
-		      try
-		      {
-		        Thread.sleep(10);
-		      } 
-		      catch (InterruptedException e)
-		      {
-		        e.printStackTrace();
-		      }
-		    }
-	 }
-
 
 
 
 
 	@Override
-	public void actionPerformed(ActionEvent arg0)
+	public void actionPerformed(ActionEvent e)
 	{
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
-	
 }
 	  
 	  
