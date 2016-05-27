@@ -1,14 +1,21 @@
 package fr.iutvalence.info.dut.m2107;
 
-public class Batiment extends CaseVille {
-
+ public abstract class Batiment{
+	 
+	    // Override dans chaque classe héritant de Batiment
+	 
+	protected Joueur proprietaire;
+	 
 	public Batiment(int deplacement, int defense)
 	{
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	
+	public void changeProprietaire(Joueur newProprio) {
+        this.proprietaire = newProprio;
+    }
+ 
 	public boolean isCatchable()
 	{
 		return true;
@@ -20,10 +27,5 @@ public class Batiment extends CaseVille {
 		throw new UnsupportedOperationException();
 	}
 
-	
-	public void changerJoueur() {
-		// TODO - implement Batiment.changerJoueur
-		throw new UnsupportedOperationException();
-	}
 
 }
