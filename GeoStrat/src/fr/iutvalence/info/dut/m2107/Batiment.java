@@ -1,10 +1,10 @@
 package fr.iutvalence.info.dut.m2107;
 
-public class Batiment extends Case {
+public class Batiment extends CaseVille {
 
-	public Batiment(int deplacement, int defense, int numeroCase)
+	public Batiment(int deplacement, int defense)
 	{
-		super(deplacement, defense, numeroCase);
+		super();
 		// TODO Auto-generated constructor stub
 	}
 

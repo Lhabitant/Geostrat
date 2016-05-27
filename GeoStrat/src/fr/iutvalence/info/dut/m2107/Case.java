@@ -4,26 +4,21 @@ package fr.iutvalence.info.dut.m2107;
  * @author fluchaiv
  *
  */
-public class Case 
+abstract class Case 
 {
 
-	private int deplacement;
-
-	private int defense;
-
-	protected int numeroCase;
+	public abstract int getVitesse();
 	
-	/**
-	 * @param deplacement
-	 * @param defense
-	 * @param numeroCase
-	 */
-	public Case(int deplacement, int defense, int numeroCase)
+	public abstract int getDefense();
+	
+	public void displayVitesse()
 	{
-		super();
-		this.deplacement = deplacement;
-		this.defense = defense;
-		this.numeroCase = numeroCase;
+		System.out.println("Vitesse de deplacement : " + getVitesse() + "%");
 	}
 
+	public void displayDefense()
+	{
+		System.out.println("Vitesse de deplacement : " + getDefense() + "%");
+	}
+	
 }
