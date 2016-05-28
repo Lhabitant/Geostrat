@@ -17,9 +17,9 @@ public class Usine extends Batiment {
 
 	public void constuireUnite() {
 		// TODO - implement Usine.constuireUnite
-		Scanner sc = new Scanner(System.in);
+		Scanner choixunit = new Scanner(System.in);
 		System.out.println("fait un choix");
-		int nomunit = sc.nextInt();
+		int nomunit = choixunit.nextInt();
 		int numero = 0;
 		
 		if(nomunit == 1)
