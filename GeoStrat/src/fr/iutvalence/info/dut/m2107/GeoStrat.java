@@ -23,7 +23,6 @@ public class GeoStrat {
 		InterfaceUtilisateur win = new InterfaceUtilisateur();
 		Audio son = new Audio(null);
 
-
 	}
 
 	
