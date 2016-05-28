@@ -1,5 +1,7 @@
 package fr.iutvalence.info.dut.m2107;
 
+import java.util.Scanner;
+
 public class Usine extends Batiment {
 
 	/**
@@ -15,7 +17,32 @@ public class Usine extends Batiment {
 
 	public void constuireUnite() {
 		// TODO - implement Usine.constuireUnite
-		throw new UnsupportedOperationException();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("fait un choix");
+		int nomunit = sc.nextInt();
+		int numero = 0;
+		
+		if(nomunit == 1)
+		{
+			numero++;
+			Unite triangle = new Soldier();
+			triangle.numeroUnite = numero;
+			System.out.println(numero);
+		}
+		if(nomunit == 2)
+		{
+			numero++;
+			Unite triangle = new Soldier();
+			triangle.numeroUnite = numero;
+			System.out.println(numero);
+		}
+		if(nomunit == 3)
+		{
+			numero++;
+			Unite triangle = new Soldier();
+			triangle.numeroUnite = numero;
+			System.out.println(numero);
+		}
 	}
 
 }
