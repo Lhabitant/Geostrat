@@ -26,5 +26,7 @@ public class VirtualCarte {
 	            cases[i].displayDefense();
         }
         
+        Carte carte = new Carte(); // appel constructeur qui va initialiser la carte via initCarte()
+        carte.afficherMap(); // affiche en console toute les cases : Type(Vitesse)
     }
 }
