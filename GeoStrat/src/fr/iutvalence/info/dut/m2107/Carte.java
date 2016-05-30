@@ -26,15 +26,16 @@ public class Carte {
 	}
 
 
-	public void creer() 
+	public void afficherMap() 
 	{
-		// TODO - implement Carte.creer
-		throw new UnsupportedOperationException();
+	       for(int i = 0 ; i < cases.length ; i++)
+	       {
+	    	   for(int j = 0 ; j < cases.length ; j++)
+	    	   {
+	    		   System.out.print(cases[i][j].getClass().toString() + " " + cases[i][j].getVitesse() + "\t");
+	    	   }
+	       }
 	}
-
-	public void afficherMap() {
-		// TODO - implement Carte.afficherMap
-		throw new UnsupportedOperationException();
-	}
+	        
 
 }

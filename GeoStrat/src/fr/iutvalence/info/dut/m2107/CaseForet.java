@@ -1,6 +1,3 @@
-/**
- * 
- */
 package fr.iutvalence.info.dut.m2107;
 
 /**

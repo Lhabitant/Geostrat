@@ -1,7 +1,7 @@
 package fr.iutvalence.info.dut.m2107;
 
 /**
- * @author fluchaiv
+ * @author VickFluchaire
  *
  */
 abstract class Case 
@@ -18,7 +18,9 @@ abstract class Case
 
 	public void displayDefense()
 	{
-		System.out.println("Vitesse de deplacement : " + getDefense() + "%");
+		System.out.println("Bonus de défense : " + getDefense() + "%");
 	}
+	
+	
 	
 }
