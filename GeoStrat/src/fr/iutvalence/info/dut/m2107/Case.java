@@ -21,6 +21,4 @@ abstract class Case
 		System.out.println("Bonus de défense : " + getDefense() + "%");
 	}
 	
-	
-	
 }

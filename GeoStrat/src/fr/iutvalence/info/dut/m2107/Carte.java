@@ -19,7 +19,6 @@ public class Carte {
 		return cases;
 	}
 
-
 	public void setCases(Case[][] cases) 
 	{
 		this.cases = cases;

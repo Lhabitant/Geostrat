@@ -25,5 +25,6 @@ public class VirtualCarte {
 	            cases[i].displayVitesse();
 	            cases[i].displayDefense();
         }
+        
     }
 }

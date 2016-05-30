@@ -20,5 +20,4 @@ public class CasePlaine extends Case{
 		// TODO Auto-generated method stub
 		return 10;
 	}
-
 }

@@ -15,5 +15,4 @@ class CaseForet extends Case{
 		return 50;
 	}
 	
-
 }
