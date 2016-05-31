@@ -35,7 +35,7 @@ private int posY = -50;
 
 
 private final int REALRECTX = 0;
-private final int REALRECTY = 30;
+private final int REALRECTY = 0;
 
 
 private final int SIZERECT = 150;
@@ -48,19 +48,37 @@ private final int INFORECTY = 500;
 private final int MAPRECTX = 850;
 private final int MAPRECTY = 500;
 
+private final int NBRC = 8;
+private final int NBRL = 20;
+
 
 public void paintComponent(Graphics g){
-
-	
+	int lX = 0;
+	int lY = 0;
 //!\\ Don't forget for a rect it's always
 	 // x, y, longueur, largeur
 	 	/**
 	 	 * It's the "real" map
 	 	 */
 	 	//color of rect of oval
-	  //  g.setColor(Color.white);
+	  	g.setColor(Color.white);
  	    //size of rect of oval
-	   //  g.fillRect(REALRECTX,REALRECTY,this.getWidth(),this.getHeight()-200);
+	    g.fillRect(REALRECTX,REALRECTY,this.getWidth(),this.getHeight()-200);
+	    
+	    g.setColor(Color.black);
+	    for(int x = 0; x <= NBRC; x++)
+	    {
+	    	  g.drawLine(0,lX ,this.getWidth(),lX);
+	    	  lX = lX + 50; 
+	    }
+	    for(int y = 0; y <= NBRL; y++)
+	    {
+	    	  g.drawLine(lY,0 ,lY,this.getHeight());
+	    	  lY = lY + 50; 
+	    	  System.out.println(lY);
+	    }
+	    
+	    
 	    
 	    /**
 	     * it's all unit info's rect

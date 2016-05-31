@@ -9,6 +9,9 @@ import java.awt.GridLayout;
 import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -22,7 +25,7 @@ import javax.swing.JTable;
  *
  */
 // a error, i don't know why, but well it's work
-public class InterfaceUtilisateur extends JFrame implements ActionListener {	
+public class InterfaceUtilisateur extends JFrame implements ActionListener, MouseListener, MouseMotionListener {	
 
 	
 //*******************************************************************************************
@@ -34,7 +37,7 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener {
 	
 	
 	private InterfaceUtilisateurEnJeu pan = new InterfaceUtilisateurEnJeu();
-	//private JPanel container = new JPanel();
+	private JPanel container = new JPanel();
 	private JPanel but = new JPanel();
 	private JPanel test = new JPanel();
 	// we create a new JLabel
@@ -58,8 +61,6 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener {
 	private final int BUTX = 1025;
 	private final int BUTY = 560;
 	
-
-
    
 	/**
 	 * this method is use to make a window
@@ -85,18 +86,18 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener {
 	    but.add(boutonC);
 	    but.add(boutonD);
 	    //add the button "fin de tour" on the screen
-	    test.add(boutonEnd);
+	    pan.add(boutonEnd);
 	    //add the button "bouton1" on the screen 
-	    test.add(bouton1);
+	    pan.add(bouton1);
 	    // permet de fixer les boutons
-	    test.setLayout(null);
+	    pan.setLayout(null);
 	    setLayout(null);
 	    but.setBounds(100, 100, 500, 375);
-	   // container.setLayout(new BorderLayout());
+	    container.setLayout(new BorderLayout());
 	    
 	    //display they different Jpanel
-	    this.setContentPane(test);
-	    this.setContentPane(but);
+	    this.setContentPane(pan);
+	    //this.setContentPane(but);
 	   
 	    this.setVisible(true);
 	    
@@ -107,15 +108,74 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener {
 	    //go();
 	    
 	    
+
+        this.addMouseListener(this);
+        this.addMouseMotionListener(this);
+
+	}
+
+	public InterfaceUtilisateur(String filename) throws Exception {
+
+	 }
+
+
+
+
+	public void mouseDragged(MouseEvent e)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	//lorsque la souris bouge
+	public void mouseMoved(MouseEvent e) 
+	{
+		System.out.println("Position: x= "+e.getX()/50+" y = "+e.getY()/50);
+		System.out.println("Real Position: x= "+e.getX()+" y = "+e.getY());
+	}
+	public void mouseClicked(MouseEvent e) 
+	{
+		System.out.println("Clic: x= "+e.getX()/50+" y = "+e.getY()/50);
+	}
 	
+	@Override
+	public void mouseEntered(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 
 
 
 
 	@Override
-	public void actionPerformed(ActionEvent e)
-	{
+	public void mouseExited(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	@Override
+	public void mousePressed(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	@Override
+	public void mouseReleased(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
