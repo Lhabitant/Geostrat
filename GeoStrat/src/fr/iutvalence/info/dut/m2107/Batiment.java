@@ -21,11 +21,4 @@ package fr.iutvalence.info.dut.m2107;
 		return true;
 	}
 
-	
-	public void supprimer() {
-		// TODO - implement Batiment.supprimer
-		throw new UnsupportedOperationException();
-	}
-
-
 }

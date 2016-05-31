@@ -20,6 +20,5 @@ public class CaseMontagne extends Case{
 		// TODO Auto-generated method stub
 		return 75;
 	}
-	
 
 }
