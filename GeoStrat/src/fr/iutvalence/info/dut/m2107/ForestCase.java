@@ -4,7 +4,7 @@ package fr.iutvalence.info.dut.m2107;
  * @author Victor
  *	It's the case for the forest, this class extends of Case
  */
-class CaseForet extends Case{
+class ForestCase extends Case{
 	
 
 	public int getVitesse(){
@@ -15,4 +15,8 @@ class CaseForet extends Case{
 		return 50;
 	}
 	
+	String getType()
+	{
+		return "Foret";
+	}
 }

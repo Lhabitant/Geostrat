@@ -7,18 +7,20 @@ package fr.iutvalence.info.dut.m2107;
  * @author Victor
  *
  */
-public class CaseMontagne extends Case{
+public class PlainCase extends Case{
 
 	@Override
 	public int getVitesse() {
-		// TODO Auto-generated method stub
-		return 25;
+		return 100;
 	}
 
 	@Override
 	public int getDefense() {
-		// TODO Auto-generated method stub
-		return 75;
+		return 10;
 	}
-
+	
+	String getType()
+	{
+		return "Plaine";
+	}
 }

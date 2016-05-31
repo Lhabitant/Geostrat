@@ -11,6 +11,8 @@ abstract class Case
 	
 	public abstract int getDefense();
 	
+	abstract String getType(); 
+	
 	public void displayVitesse()
 	{
 		System.out.println("Vitesse de deplacement : " + getVitesse() + "%");
@@ -19,6 +21,5 @@ abstract class Case
 	public void displayDefense()
 	{
 		System.out.println("Bonus de défense : " + getDefense() + "%");
-	}
-	
+	}	
 }

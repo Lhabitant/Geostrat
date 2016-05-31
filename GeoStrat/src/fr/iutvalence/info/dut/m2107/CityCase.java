@@ -7,12 +7,12 @@ package fr.iutvalence.info.dut.m2107;
  * @author Victor
  *
  */
-public class CaseVille extends Case
+public class CityCase extends Case
 {
 	protected Joueur proprietaire;
 	
 	
-	public CaseVille() {
+	public CityCase() {
 		super();
 		this.proprietaire = null;
 	}
@@ -20,24 +20,27 @@ public class CaseVille extends Case
 	/**
 	 * @param proprietaire
 	 */
-	public CaseVille(Joueur proprietaire) {
+	public CityCase(Joueur proprietaire) {
 		super();
 		this.proprietaire = proprietaire;
 	}
 
 	@Override
 	public int getVitesse() {
-		// TODO Auto-generated method stub
 		return 50;
 	}
 
 	@Override
 	public int getDefense() {
-		// TODO Auto-generated method stub
 		return 75;
 	}
 	
-	public void changeProprietaire(Joueur newProprio) {
+	String getType()
+	{
+		return "Ville";
+	}
+	
+	public void switchOwner(Joueur newProprio) {
         this.proprietaire = newProprio;
     }
  
