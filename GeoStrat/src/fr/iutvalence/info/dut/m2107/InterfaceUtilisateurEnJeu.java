@@ -53,7 +53,7 @@ private final int NBRL = 20;
 
 
 public void paintComponent(Graphics g){
-	int lX = 0;
+	int lX = 0; 
 	int lY = 0;
 //!\\ Don't forget for a rect it's always
 	 // x, y, longueur, largeur

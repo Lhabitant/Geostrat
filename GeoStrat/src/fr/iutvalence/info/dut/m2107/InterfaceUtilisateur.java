@@ -120,7 +120,6 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 
 
 
-
 	public void mouseDragged(MouseEvent e)
 	{
 		// TODO Auto-generated method stub
