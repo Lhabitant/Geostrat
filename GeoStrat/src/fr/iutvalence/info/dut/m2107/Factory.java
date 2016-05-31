@@ -2,17 +2,16 @@ package fr.iutvalence.info.dut.m2107;
 
 import java.util.Scanner;
 
-public class Usine extends Batiment {
+public class Factory extends Building {
 
 	/**
 	 * @param deplacement
 	 * @param defense
 	 * @param numeroCase
 	 */
-	public Usine(int deplacement, int defense, int numeroCase)
+	public Factory(int deplacement, int defense)
 	{
-		super(deplacement, defense, numeroCase);
-		// TODO Auto-generated constructor stub
+		super(deplacement, defense);
 	}
 
 	public void constuireUnite() {
@@ -43,6 +42,23 @@ public class Usine extends Batiment {
 			triangle.numeroUnite = numero;
 			System.out.println(numero);
 		}
+	}
+	
+	/**
+	 * Method for switch the owner of the factory. Owner is a player
+	 * @param newProprio
+	 */
+	public void switchOwner(Joueur newProprio) {
+        this.proprietaire = newProprio;
+    }
+ 
+	/**
+	 * Method to make the factory catchable
+	 * @return boolean
+	 */
+	public boolean isCatchable()
+	{
+		return true;
 	}
 
 }

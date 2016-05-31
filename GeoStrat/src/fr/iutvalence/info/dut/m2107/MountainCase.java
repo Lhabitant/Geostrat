@@ -9,17 +9,27 @@ package fr.iutvalence.info.dut.m2107;
  */
 public class MountainCase extends Case{
 
-	@Override
+	/**
+	 * Getter for speed
+	 * @return integer
+	 */
 	public int getVitesse() {
 		return 25;
 	}
 
-	@Override
+	/**
+	 * Getter for defense
+	 * @return integer
+	 */
 	public int getDefense() {
 		return 75;
 	}
 	
-	String getType()
+	/**
+	 * Display for the type of the case
+	 * @return cases type
+	 */
+	public String getType()
 	{
 		return "Montagne";
 	}

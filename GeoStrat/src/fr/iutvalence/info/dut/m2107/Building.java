@@ -1,6 +1,7 @@
 package fr.iutvalence.info.dut.m2107;
 
- public abstract class Building{
+ public abstract class Building
+ {
 	 
 	    // Override dans chaque classe héritant de Batiment
 	 
@@ -9,7 +10,23 @@ package fr.iutvalence.info.dut.m2107;
 	public Building(int deplacement, int defense)
 	{
 		super();
-		// TODO Auto-generated constructor stub
+	}
+	
+	/**
+	 * Method for switch the owner of the building. Owner is a player
+	 * @param newProprio
+	 */
+	public void switchOwner(Joueur newProprio) {
+        this.proprietaire = newProprio;
+    }
+ 
+	/**
+	 * Method to make the building catchable
+	 * @return boolean
+	 */
+	public boolean isCatchable()
+	{
+		return true;
 	}
 
 }

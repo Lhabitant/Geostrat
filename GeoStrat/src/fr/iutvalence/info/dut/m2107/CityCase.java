@@ -5,14 +5,17 @@ package fr.iutvalence.info.dut.m2107;
 
 /**
  * @author Victor
- *
+ * This class stock the method for the city and the batiment
  */
 public class CityCase extends Case
 {
 	protected Joueur proprietaire;
 	
-	
-	public CityCase() {
+	/**
+	 * Construction for the initialization
+	 */
+	public CityCase() 
+	{
 		super();
 		this.proprietaire = null;
 	}
@@ -25,25 +28,43 @@ public class CityCase extends Case
 		this.proprietaire = proprietaire;
 	}
 
-	@Override
+	/**
+	 * Getter for speed
+	 * @return integer
+	 */
 	public int getVitesse() {
 		return 50;
 	}
 
-	@Override
+	/**
+	 * Getter for defense
+	 * @return integer
+	 */
 	public int getDefense() {
 		return 75;
 	}
 	
-	String getType()
+	/**
+	 * Display for the type of the case
+	 * @return cases type
+	 */
+	public String getType()
 	{
 		return "Ville";
 	}
 	
+	/**
+	 * Method for switch the owner of the city. Owner is a player
+	 * @param newProprio
+	 */
 	public void switchOwner(Joueur newProprio) {
         this.proprietaire = newProprio;
     }
  
+	/**
+	 * Method to make the city catchable
+	 * @return boolean
+	 */
 	public boolean isCatchable()
 	{
 		return true;

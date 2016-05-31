@@ -1,15 +1,15 @@
 package fr.iutvalence.info.dut.m2107;
 
-public class QuartierGeneral extends Batiment {
+public class QuartierGeneral extends Building {
 
 	/**
 	 * @param deplacement
 	 * @param defense
 	 * @param numeroCase
 	 */
-	public QuartierGeneral(int deplacement, int defense, int numeroCase)
+	public QuartierGeneral(int deplacement, int defense)
 	{
-		super(deplacement, defense, numeroCase);
+		super(deplacement, defense);
 		// TODO Auto-generated constructor stub
 	}
 

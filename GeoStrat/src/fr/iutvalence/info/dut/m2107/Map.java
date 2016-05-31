@@ -5,7 +5,9 @@ public class Map {
 	public final static int SIZE = 20;
     
     protected Case[][] cases= new Case[SIZE][SIZE];
+    
 	/**
+	 * Initialized the map with forest case only
 	 * @param cases
 	 */
 	public Map() 
@@ -18,17 +20,27 @@ public class Map {
 		 }
 	}
 	
-	private final Case[][] getCases() 
+	/**
+	 * Getter for the class Map
+	 * @return cases
+	 */
+	public final Case[][] getCases() 
 	{
 		return cases;
 	}
 
-	
-	private final void setCases(Case[][] cases) 
+	/**
+	 * Setter for the class Map
+	 * @return cases
+	 */
+	public void setCases(Case[][] cases) 
 	{
 		this.cases = cases;
 	}
 
+	/**
+	 * This method permit a display for the map and a display for the type and the vitesse
+	 */
 	public void displayMap() 
 	{
 		for(int i = 0 ; i < cases.length ; i++)
