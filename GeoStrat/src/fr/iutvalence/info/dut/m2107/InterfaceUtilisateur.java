@@ -32,84 +32,184 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 //!\\ User Interface in construction //!\\
 //*******************************************************************************************	
 	
-
-
-	
-	
+	/**
+	 * C'est utilisé pour afficher les informations contenu dans InterfaceUtilisateurEnJeu
+	 * Un JPanel utilisé pour afficher des boutons
+	 * boutons :
+	 * - fin de tour 
+	 * - bouton1
+	 */
 	private InterfaceUtilisateurEnJeu pan = new InterfaceUtilisateurEnJeu();
+	/**
+	 * 
+	 */
 	private JPanel container = new JPanel();
+	/**
+	 * Jpanel utilisé pour l'affichage d'un tableau de bouton, obsolète
+	 */
 	private JPanel but = new JPanel();
+	/**
+	 * Jpanel utilisé lors de test
+	 */
 	private JPanel test = new JPanel();
 	// we create a new JLabel
     JLabel label = new JLabel("JLabel");
-    // create a new button with the class Bouton
-    JButton boutonEnd = new JButton(new EndTurnAction("Fin de tour"));
-    JButton bouton1 = new JButton(new Action1("bouton1"));
+    /**
+     * création du bouton de fin de tour, il fait appel à la classe EndTurnAction
+     * La classe permet d'afficher "vous avez cliqué ici"
+     */
+    JButton boutonEnd = new JButton(new EndTurnAction("Fin de tour"));	// create a new button with the class Bouton
+    /**
+     * création du bouton de fin de tour, il fait appel à la classe Action1
+     * La classe permet d'afficher "vous avez cliqué là"
+     */
+    JButton bouton1 = new JButton(new Action1("bouton1"));	// create a new button with the class Bouton
     
+    /**
+     * création d'un bouton pour l'affficher dans un tableau, fonctionnel mais obsolète
+     */
     JButton boutonA = new JButton("A");
+    /**
+     * création d'un bouton pour l'affficher dans un tableau, fonctionnel mais obsolète
+     */
     JButton boutonB = new JButton("B");
+    /**
+     * création d'un bouton pour l'affficher dans un tableau, fonctionnel mais obsolète
+     */
     JButton boutonC = new JButton("C");
+    /**
+     * création d'un bouton pour l'affficher dans un tableau, fonctionnel mais obsolète
+     */
     JButton boutonD = new JButton("D");
 	
+    /**
+     *  Résolution en X de la fenetre
+     */
     private final int RESX = 1200;
+    /**
+     *  Résolution en Y de la fenetre
+     */
 	private final int RESY = 700;
-	
+	/**
+	 * largueur des bouton
+	 */
 	private final int LENDBUT = 150;
+	/**
+	 * longueur des bouton
+	 */
 	private final int lENDBUT = 50;
+	/**
+	 * position en x du bouton fin de tour
+	 */
 	private final int ENDBUTX = 1025;
+	/**
+	 * position en y du bouton fin de tour
+	 */
 	private final int ENDBUTY = 500;
+	/**
+	 * position en x du bouton1
+	 */
 	private final int BUTX = 1025;
+	/**
+	 * position en y du bouton1
+	 */
 	private final int BUTY = 560;
 	
    
 	/**
-	 * this method is use to make a window
+	 * Création de la fenetre et de tout ce qui la compose
 	 */
 	public InterfaceUtilisateur()
 	{ 
 	  
-		// name of window 
+		/**
+		 * nom de la fenetre
+		 */
 		this.setTitle("GeoStrat");
-		// This of window X,Y
+		/**
+		 * résolution de la fenetre
+		 */
 	    this.setSize(RESX, RESY );
-	    // position of window (center)
-	    this.setLocationRelativeTo(null);
-	    //stop the programm when we close the window
-	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);             
-	    //we can see the window
-	    this.setVisible(true);
-	    this.setLocationRelativeTo(null);
+	    /**
+	     * position de la fenetre (ici au centre de l'écran)
+	     */
+	    this.setLocationRelativeTo(null);	 // position of window (center)
+	    /**
+	     * ferme la fenetre quand on clique sur la croix rouge
+	     */
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // position of window (center)          
+	    /**
+	     * permet d'afficher la fenêtre à l'écran
+	     */
+	    this.setVisible(true);	//we can see the window
+	   // this.setLocationRelativeTo(null);
 	    
+	    
+	    /**
+	     * affiche une grille en 2 par 2 de boutons, les 3 indiquent les espacements en x et y
+	     * obsolète
+	     */
 	    but.setLayout(new GridLayout(2,2,3,3));
+	    /**
+	     * ajoute un boutonA
+	     */
 	    but.add(boutonA);
+	    /**
+	     * ajoute un boutonB
+	     */
 	    but.add(boutonB);
+	    /**
+	     * ajoute un boutonC
+	     */
 	    but.add(boutonC);
+	    /**
+	     * ajoute un boutonD
+	     */
 	    but.add(boutonD);
-	    //add the button "fin de tour" on the screen
-	    pan.add(boutonEnd);
-	    //add the button "bouton1" on the screen 
-	    pan.add(bouton1);
-	    // permet de fixer les boutons
-	    pan.setLayout(null);
-	    setLayout(null);
-	    but.setBounds(100, 100, 500, 375);
-	    container.setLayout(new BorderLayout());
+	    /**
+	     * ajoute un bouton fin de tour
+	     */
+	    pan.add(boutonEnd);	//add the button "fin de tour" on the screen
+	    /**
+	     * ajoute un bouton1
+	     */
+	    pan.add(bouton1);	//add the button "bouton1" on the screen 
+	    /**
+	     * permet de fixer les boutons 
+	     * fin de tour
+	     * Bouton1
+	     */
+	    pan.setLayout(null);	// permet de fixer les boutons
+	   // setLayout(null);
+	   // but.setBounds(100, 100, 500, 375);
+	   // container.setLayout(new BorderLayout());
 	    
 	    //display they different Jpanel
 	    this.setContentPane(pan);
 	    //this.setContentPane(but);
 	   
-	    this.setVisible(true);
+	    //this.setVisible(true);
 	    
 	    
-	    //postion of end turn buttom (here bouton) (x,y,longueur,largueur)
-	    boutonEnd.setBounds(ENDBUTX, ENDBUTY, LENDBUT,  lENDBUT);
-	    bouton1.setBounds(BUTX, BUTY, LENDBUT,  lENDBUT);
+	   
+	    /**
+	     * position du bouton fin de tour
+	     */
+	    boutonEnd.setBounds(ENDBUTX, ENDBUTY, LENDBUT,  lENDBUT);	 //postion of end turn buttom (here bouton) (x,y,longueur,largueur)
+	    /**
+	     * position du bouton1
+	     */
+	    bouton1.setBounds(BUTX, BUTY, LENDBUT,  lENDBUT);	 //postion buttom1 (here bouton) (x,y,longueur,largueur)
 	    //go();
 	    
 	    
-
+	    /**
+	     * permet d'écouter la souris
+	     */
         this.addMouseListener(this);
+        /**
+	     * permet d'écouter les mouvements de la souris
+	     */
         this.addMouseMotionListener(this);
 
 	}
@@ -126,15 +226,22 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 		
 	}
 
-	//lorsque la souris bouge
-	public void mouseMoved(MouseEvent e) 
+	/**
+	 * méthode qui sert à lire et à afficher les coordonées de la souris 
+	 */
+	public void mouseMoved(MouseEvent e) //lorsque la souris bouge
 	{
-		System.out.println("Position: x= "+e.getX()/50+" y = "+e.getY()/50);
-		System.out.println("Real Position: x= "+e.getX()+" y = "+e.getY());
+		int x = (e.getX()-10)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en x
+		int y = (e.getY()-30)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en y
+		System.out.println("Position: x= "+x+" y = "+y); 	// on affiche les coordonnées calculé de la souris
+		System.out.println("Real Position: x= "+e.getX()+" y = "+e.getY());// on affiche les coordonnées de la souris
 	}
+	/**
+	 * méthode qui sert à lire et à afficher les coordonées de la souris durant un clic
+	 */
 	public void mouseClicked(MouseEvent e) 
 	{
-		System.out.println("Clic: x= "+e.getX()/50+" y = "+e.getY()/50);
+		System.out.println("Clic: x= "+e.getX()/50+" y = "+e.getY()/50); // affiche les coordonnées calculé de la souris (ancienne méthode bugué) 
 	}
 	
 	@Override
