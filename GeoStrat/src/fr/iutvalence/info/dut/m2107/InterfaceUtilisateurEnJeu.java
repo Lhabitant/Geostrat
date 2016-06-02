@@ -109,6 +109,11 @@ private final int NBRC = 9;
  * C'est le nombre de ligne que le programme va afficher
  */
 private final int NBRL = 23;
+/**
+ * cote d'une case
+ */
+private final int SPACE = 50;
+Action1 action = new Action1("test");
 
 
 /**
@@ -117,14 +122,16 @@ private final int NBRL = 23;
  * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
  */
 public void paintComponent(Graphics g){
+
 	/**
 	 * Variable qui sert à afficher les colonnes
 	 */
-	int lX = 0; 
-	/**
+	 int lX = 0; 
+	 /**
 	 * Variable qui sert à afficher les lignes
 	 */
-	int lY = 0;
+	 int lY = 0;
+
 	 
 	
 						//!\\ x, y, longueur, largeur
@@ -142,12 +149,12 @@ public void paintComponent(Graphics g){
 	    for(int x = 0; x <= NBRC; x++)	// boucle utilisé pour la création des colonnes
 	    {
 	    	  g.drawLine(0,lX ,this.getWidth(),lX); 	// on affiche les colonnes
-	    	  lX = lX + 50; 	// on déplace la prochaine ligne dee 50
+	    	  lX = lX + SPACE; 	// on déplace la prochaine ligne dee 50
 	    }
 	    for(int y = 0; y <= NBRL; y++)	// boucle utilisé pour la création des lignes
 	    {
 	    	  g.drawLine(lY,0 ,lY,this.getHeight());	// on affiche les lignes
-	    	  lY = lY + 50;	// on déplace la prochaine ligne dee 50
+	    	  lY = lY + SPACE;	// on déplace la prochaine ligne dee 50
 	    }
 	    
 	    
@@ -198,9 +205,30 @@ public void paintComponent(Graphics g){
 		      e.printStackTrace(); 	// gestion de l'exception
 		    }         
    
-	  }
+	  
+	/**
+	 * Methode qui sert à afficher la case selectionné
+	 */
+	if(action.getSelect() == false) //on utilise le bouton action 1 pour changer le selecteur
+	{
+		int test  = InterfaceUtilisateur.getTileSelectX() * SPACE; // on prend la valeur de la case selectionne en X et on la multiplie par la taille
+		int tes = InterfaceUtilisateur.getTileSelectY() * SPACE;	// on prend la valeur de la case selectionne en Y et on la multiplie par la taille
+		g.setColor(Color.blue);   //color
+	    g.fillRect(test,tes,50,50);	  //size
+	}
   
- 
+	/**
+	 * Methode qui sert à afficher la case selectionné
+	 */
+	if(action.getSelect() == true) //on utilise le bouton action 1 pour changer le selecteur
+	{
+		int test  = InterfaceUtilisateur.getMouseX() * SPACE; 	// on prend les coordonnées calculé en X et on la multiplie par la taille
+		int tes = InterfaceUtilisateur.getMouseY() * SPACE;		// on prend les coordonnées calculé en Y et on la multiplie par la taille
+		g.setColor(Color.red);   //color
+	    g.fillRect(test,tes,50,50);	  //size
+	}
+  
+	repaint();
  
  // use for the oval, but no use at all
 /*
@@ -220,4 +248,5 @@ public void paintComponent(Graphics g){
 	    this.posY = posY;
 	  }        
 */
+}
 }

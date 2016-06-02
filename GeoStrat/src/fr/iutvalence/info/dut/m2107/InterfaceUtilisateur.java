@@ -117,11 +117,20 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	/**
 	 * permet d'afficher les coordonnée de la souris en x en fonction du tableau
 	 */
-	private int mouseX = 0;
+	private static int mouseX = 0;
 	/**
 	 * permet d'afficher les coordonnée de la souris en y en fonction du tableau
 	 */
-	private int mouseY = 0;
+	private static int mouseY = 0;
+	/**
+	 * sert à la selection d'une case
+	 */
+	private static int tileSelectX;
+	/**
+	 * sert à la selection d'une case
+	 */
+	private static int tileSelectY;
+	
 	/**
 	 * Création de la fenetre et de tout ce qui la compose
 	 */
@@ -217,6 +226,8 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	     * permet d'écouter les mouvements de la souris
 	     */
         this.addMouseMotionListener(this);
+        
+  
 
 	}
 
@@ -247,25 +258,45 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	 */
 	public void mouseClicked(MouseEvent e) 
 	{
-		System.out.println("Clic: x= "+e.getX()/50+" y = "+e.getY()/50); // affiche les coordonnées calculé de la souris (ancienne méthode bugué)
-
+		tileSelectX = mouseX;
+		tileSelectY = mouseY;
+		System.out.println("Case selectionne");
+		System.out.println("Position: x= "+mouseX+" y = "+mouseY); 	// on affiche les coordonnées calculé de la souris
+				
 	}
 	
 	/**
 	 * @return mouseX
 	 */
-	public int getMouseX()
+	public static int getMouseX()
 	{
-		return this.mouseX;
+		return mouseX;
 	}
 	
 	/**
 	 * @return mouseY
 	 */
-	public int getMouseY()
+	public static int getMouseY()
 	{
-		return this.mouseY;
+		return mouseY;
 	}
+	
+	/**
+	 * @return tileSelectX
+	 */
+	public static int getTileSelectX()
+	{
+		return tileSelectX;
+	}
+	
+	/**
+	 * @return tileSelectY
+	 */
+	public static int getTileSelectY()
+	{
+		return tileSelectY;
+	}
+	
 	@Override
 	public void mouseEntered(MouseEvent arg0) {
 		// TODO Auto-generated method stub
