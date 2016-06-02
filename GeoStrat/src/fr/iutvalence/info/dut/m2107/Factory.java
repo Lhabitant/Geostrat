@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Factory extends Building {
 
+	int number = 0;//made to put the number of the unity
+	
 	/**
 	 * @param deplacement
 	 * @param defense
@@ -13,34 +15,37 @@ public class Factory extends Building {
 	{
 		super(deplacement, defense);
 	}
-
+/**
+ * this is where a new unit is created
+ * the player choose a number
+ * 1 is for Triangle(Soldier)
+ * 2 is for Square (Tank)
+ * 3 is for Circle (Engineer)
+ */
 	public void constuireUnite() {
 		// TODO - implement Usine.constuireUnite
-		Scanner choixunit = new Scanner(System.in);
+		Scanner unitchose = new Scanner(System.in);
 		System.out.println("fait un choix");
-		int nomunit = choixunit.nextInt();
-		int numero = 0;
+		int unitname = unitchose.nextInt();
+
 		
-		if(nomunit == 1)
+		if(unitname == 1)
 		{
-			numero++;
-			Unite triangle = new Soldier();
-			triangle.numeroUnite = numero;
-			System.out.println(numero);
+			number++;
+			Unit triangle = new Soldier();
+			triangle.unitNumber = number;
 		}
-		if(nomunit == 2)
+		if(unitname == 2)
 		{
-			numero++;
-			Unite triangle = new Soldier();
-			triangle.numeroUnite = numero;
-			System.out.println(numero);
+			number++;
+			Unit square = new Tank();
+			square.unitNumber = number;
 		}
-		if(nomunit == 3)
+		if(unitname == 3)
 		{
-			numero++;
-			Unite triangle = new Soldier();
-			triangle.numeroUnite = numero;
-			System.out.println(numero);
+			number++;
+			Unit circle = new Engineer();
+			circle.unitNumber = number;
 		}
 	}
 	
