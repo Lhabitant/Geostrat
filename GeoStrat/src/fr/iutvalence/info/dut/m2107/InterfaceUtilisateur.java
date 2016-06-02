@@ -114,8 +114,14 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	 * position en y du bouton1
 	 */
 	private final int BUTY = 560;
-	
-   
+	/**
+	 * permet d'afficher les coordonnée de la souris en x en fonction du tableau
+	 */
+	private int mouseX = 0;
+	/**
+	 * permet d'afficher les coordonnée de la souris en y en fonction du tableau
+	 */
+	private int mouseY = 0;
 	/**
 	 * Création de la fenetre et de tout ce qui la compose
 	 */
@@ -231,9 +237,9 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	 */
 	public void mouseMoved(MouseEvent e) //lorsque la souris bouge
 	{
-		int x = (e.getX()-10)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en x
-		int y = (e.getY()-30)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en y
-		System.out.println("Position: x= "+x+" y = "+y); 	// on affiche les coordonnées calculé de la souris
+		mouseX = (e.getX()-10)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en x
+		mouseY = (e.getY()-30)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en y
+		System.out.println("Position: x= "+mouseX+" y = "+mouseY); 	// on affiche les coordonnées calculé de la souris
 		System.out.println("Real Position: x= "+e.getX()+" y = "+e.getY());// on affiche les coordonnées de la souris
 	}
 	/**
@@ -241,9 +247,25 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	 */
 	public void mouseClicked(MouseEvent e) 
 	{
-		System.out.println("Clic: x= "+e.getX()/50+" y = "+e.getY()/50); // affiche les coordonnées calculé de la souris (ancienne méthode bugué) 
+		System.out.println("Clic: x= "+e.getX()/50+" y = "+e.getY()/50); // affiche les coordonnées calculé de la souris (ancienne méthode bugué)
+
 	}
 	
+	/**
+	 * @return mouseX
+	 */
+	public int getMouseX()
+	{
+		return this.mouseX;
+	}
+	
+	/**
+	 * @return mouseY
+	 */
+	public int getMouseY()
+	{
+		return this.mouseY;
+	}
 	@Override
 	public void mouseEntered(MouseEvent arg0) {
 		// TODO Auto-generated method stub

@@ -47,6 +47,11 @@ private int posY = -50;
  */
 private final int REALRECTX = 0;
 /**
+ * Constante utilisé pour l'affichage de la zone de jeu
+ * permet de régler la largeur du triangle
+ */
+private final int CALE = 210;
+/**
  * constante utilisé pour l'affichage de la zone de jeu
  * c'est la position en y du rectangle
  */
@@ -99,11 +104,11 @@ private final int MAPRECTY = 500;
 /**
  * C'est le nombre de colonne que le programme va afficher
  */
-private final int NBRC = 8;
+private final int NBRC = 9;
 /**
  * C'est le nombre de ligne que le programme va afficher
  */
-private final int NBRL = 20;
+private final int NBRL = 23;
 
 
 /**
@@ -128,7 +133,7 @@ public void paintComponent(Graphics g){
 	 	 * couleur blanc
 	 	 */
 	  	g.setColor(Color.white);	//color of rect 
-	    g.fillRect(REALRECTX,REALRECTY,this.getWidth(),this.getHeight()-200);	//size of rect 
+	    g.fillRect(REALRECTX,REALRECTY,this.getWidth(),this.getHeight()-CALE);	//size of rect 
 	    
 	    /**
 	     *  Création du tableau de jeu
