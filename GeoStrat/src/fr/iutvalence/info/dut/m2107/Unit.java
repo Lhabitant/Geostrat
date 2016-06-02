@@ -42,7 +42,14 @@ public class Unit {
 	 */
 	public void attack() 
 	{
-		//todo
+		//undone
+		int damages = this.statAtt / this.statDef;
+		this.lifePoint = this.lifePoint - damages;
+		if(this.lifePoint == 0 || this.lifePoint < 1)
+		{
+			suppress();
+		}
+		changeWaiting();
 	}
 
 	/**
@@ -50,7 +57,14 @@ public class Unit {
 	 */
 	public void suppress() 
 	{
-		//todo
+		//undone
+		this.Nom = null;
+		this.unitNumber = 0;
+		this.statMove = 0;
+		this.statAtt = 0;
+		this.statDef = 0;
+		this.waiting = true;
+		this.lifePoint = 0;
 	}
 
 	/**
