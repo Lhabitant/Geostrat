@@ -138,7 +138,7 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	 */
 	Case[][] carte = map.getCases();
 	/**
-	 * it use for modify a case
+	 * it use for modify a case 
 	 * 	 */
 	Action1 action = new Action1("test");
 	

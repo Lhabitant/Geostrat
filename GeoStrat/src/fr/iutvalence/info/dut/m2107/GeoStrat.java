@@ -18,7 +18,7 @@ public class GeoStrat {
 		System.out.println(" ");
 		System.out.println("Une partie de GeoStrat a été créée. Regarde la fenêtre qui a été créée ! ");
 		System.out.println(" ");
-        Joueur Joueur = new Joueur(joueur1, sc);       
+        Joueur Joueur = new Joueur(joueur1, sc);        
 		InterfaceUtilisateur win = new InterfaceUtilisateur();
 		Audio son = new Audio(null);
 

@@ -256,7 +256,7 @@ public void paintComponent(Graphics g){
 	     * couleur gris
 	     */
 	    g.setColor(Color.DARK_GRAY);   //color
-	    g.fillRect(MAPRECTX,MAPRECTY,SIZERECT,SIZERECT);	  //size
+	    g.fillRect(MAPRECTX,MAPRECTY,SIZERECT,SIZERECT);	  //size 
 	    
 	    /*
 	     * Code obsolète

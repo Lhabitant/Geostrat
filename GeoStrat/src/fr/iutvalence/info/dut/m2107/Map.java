@@ -11,7 +11,7 @@ public class Map {
     Random r = new Random();
     
 	/**
-	 * Initialized the map with different case
+	 * Initialized the map with different case 
 	 * @param cases
 	 */
 	public Map() 
