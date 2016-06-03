@@ -1,16 +1,20 @@
 package fr.iutvalence.info.dut.m2107;
 
-public class Tank extends Unite 
+public class Tank extends Unit 
 {
+	/**
+	 * a square is a tank
+	 * default stats when created
+	 */
 	public Tank()
 	{
-		super.Nom = "Cube";
-		super.numeroUnite = 0;
-		super.prix = 0;
-		super.statDepla = 2;
+		super.Nom = "Square";
+		super.unitNumber = 0;
+		super.price = 0;
+		super.statMove = 2;
 		super.statAtt = 2;
 		super.statDef = 5;
-		super.EtatAttente = true;
-		super.pDV = 15;
+		super.waiting = true;
+		super.lifePoint = 15;
 	}
 }

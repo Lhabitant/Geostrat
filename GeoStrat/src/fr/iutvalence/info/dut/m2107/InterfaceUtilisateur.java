@@ -24,7 +24,6 @@ import javax.swing.JTable;
  * @author Lecomte Loïc
  *
  */
-// a error, i don't know why, but well it's work
 public class InterfaceUtilisateur extends JFrame implements ActionListener, MouseListener, MouseMotionListener {	
 
 	
@@ -114,8 +113,36 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	 * position en y du bouton1
 	 */
 	private final int BUTY = 560;
+	/**
+	 * permet d'afficher les coordonnée de la souris en x en fonction du tableau
+	 */
+	private static int mouseX = 0;
+	/**
+	 * permet d'afficher les coordonnée de la souris en y en fonction du tableau
+	 */
+	private static int mouseY = 0;
+	/**
+	 * sert à la selection d'une case
+	 */
+	private static int tileSelectX;
+	/**
+	 * sert à la selection d'une case
+	 */
+	private static int tileSelectY;
+	/**
+	 * create a new map
+	 */
+	Map map = new Map();
+	/**
+	 * create a new tab
+	 */
+	Case[][] carte = map.getCases();
+	/**
+	 * it use for modify a case 
+	 * 	 */
+	Action1 action = new Action1("test");
 	
-   
+	
 	/**
 	 * Création de la fenetre et de tout ce qui la compose
 	 */
@@ -211,6 +238,8 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	     * permet d'écouter les mouvements de la souris
 	     */
         this.addMouseMotionListener(this);
+        
+  
 
 	}
 
@@ -231,17 +260,61 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	 */
 	public void mouseMoved(MouseEvent e) //lorsque la souris bouge
 	{
-		int x = (e.getX()-10)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en x
-		int y = (e.getY()-30)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en y
-		System.out.println("Position: x= "+x+" y = "+y); 	// on affiche les coordonnées calculé de la souris
-		System.out.println("Real Position: x= "+e.getX()+" y = "+e.getY());// on affiche les coordonnées de la souris
+		mouseX = (e.getX()-10)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en x
+		mouseY = (e.getY()-30)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en y
+		//System.out.println("Position: x= "+mouseX+" y = "+mouseY); 	// on affiche les coordonnées calculé de la souris
+		//System.out.println("Real Position: x= "+e.getX()+" y = "+e.getY());// on affiche les coordonnées de la souris
 	}
 	/**
 	 * méthode qui sert à lire et à afficher les coordonées de la souris durant un clic
 	 */
 	public void mouseClicked(MouseEvent e) 
 	{
-		System.out.println("Clic: x= "+e.getX()/50+" y = "+e.getY()/50); // affiche les coordonnées calculé de la souris (ancienne méthode bugué) 
+		
+		tileSelectX = mouseX;
+		tileSelectY = mouseY;
+		System.out.println("Case selectionne");
+		System.out.println("Position: x= "+mouseX+" y = "+mouseY); 	// on affiche les coordonnées calculé de la souris
+		
+		if(action.getSelect() == false)
+		{
+			map.displayMap();
+			carte[tileSelectY][tileSelectX] = new MountainCase() ;
+			map.setCases(carte);
+		}		
+				
+	}
+	
+	/**
+	 * @return mouseX
+	 */
+	public static int getMouseX()
+	{
+		return mouseX;
+	}
+	
+	/**
+	 * @return mouseY
+	 */
+	public static int getMouseY()
+	{
+		return mouseY;
+	}
+	
+	/**
+	 * @return tileSelectX
+	 */
+	public static int getTileSelectX()
+	{
+		return tileSelectX;
+	}
+	
+	/**
+	 * @return tileSelectY
+	 */
+	public static int getTileSelectY()
+	{
+		return tileSelectY;
 	}
 	
 	@Override
