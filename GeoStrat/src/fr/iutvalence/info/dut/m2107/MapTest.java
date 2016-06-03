@@ -1,10 +1,8 @@
 package fr.iutvalence.info.dut.m2107;
 
-import static org.junit.Assert.*;
-
 import java.util.Random;
 
-import org.junit.Test;
+
 
 public class MapTest {
 	
@@ -14,7 +12,7 @@ public class MapTest {
     
     Random r = new Random();
 
-	@Test
+
 	public final void test() {
 		int valeur = 0 + r.nextInt(4 - 0); // generate a random number
 		if (valeur>4)
