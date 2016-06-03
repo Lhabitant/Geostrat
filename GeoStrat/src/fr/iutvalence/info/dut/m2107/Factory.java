@@ -25,7 +25,7 @@ public class Factory extends Building {
 	public void constuireUnite() {
 		// TODO - implement Usine.constuireUnite
 		Scanner unitchose = new Scanner(System.in);
-		System.out.println("fait un choix");
+		System.out.println("Faites un choix");
 		int unitname = unitchose.nextInt();
 
 		

@@ -59,7 +59,7 @@ public class Map {
 	}
 
 	/**
-	 * This method permit a display for the map and a display for the type and the vitesse
+	 * This method permit a display for the map and a display for the type and the speed
 	 */
 	public void displayMap() 
 	{
