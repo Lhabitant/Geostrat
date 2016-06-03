@@ -13,7 +13,8 @@ public class MountainCase extends Case{
 	 * Getter for speed
 	 * @return integer
 	 */
-	public int getVitesse() {
+	public int getVitesse()
+	{
 		return 25;
 	}
 
@@ -21,7 +22,8 @@ public class MountainCase extends Case{
 	 * Getter for defense
 	 * @return integer
 	 */
-	public int getDefense() {
+	public int getDefense() 
+	{
 		return 75;
 	}
 	
