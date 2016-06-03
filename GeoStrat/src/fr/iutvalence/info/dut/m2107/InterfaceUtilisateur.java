@@ -24,7 +24,6 @@ import javax.swing.JTable;
  * @author Lecomte Loïc
  *
  */
-// a error, i don't know why, but well it's work
 public class InterfaceUtilisateur extends JFrame implements ActionListener, MouseListener, MouseMotionListener {	
 
 	
@@ -130,6 +129,19 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	 * sert à la selection d'une case
 	 */
 	private static int tileSelectY;
+	/**
+	 * create a new map
+	 */
+	Map map = new Map();
+	/**
+	 * create a new tab
+	 */
+	Case[][] carte = map.getCases();
+	/**
+	 * it use for modify a case
+	 * 	 */
+	Action1 action = new Action1("test");
+	
 	
 	/**
 	 * Création de la fenetre et de tout ce qui la compose
@@ -250,18 +262,26 @@ public class InterfaceUtilisateur extends JFrame implements ActionListener, Mous
 	{
 		mouseX = (e.getX()-10)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en x
 		mouseY = (e.getY()-30)/50; // on lit les coordonnées de la souris puis on calcule son positionnement en y
-		System.out.println("Position: x= "+mouseX+" y = "+mouseY); 	// on affiche les coordonnées calculé de la souris
-		System.out.println("Real Position: x= "+e.getX()+" y = "+e.getY());// on affiche les coordonnées de la souris
+		//System.out.println("Position: x= "+mouseX+" y = "+mouseY); 	// on affiche les coordonnées calculé de la souris
+		//System.out.println("Real Position: x= "+e.getX()+" y = "+e.getY());// on affiche les coordonnées de la souris
 	}
 	/**
 	 * méthode qui sert à lire et à afficher les coordonées de la souris durant un clic
 	 */
 	public void mouseClicked(MouseEvent e) 
 	{
+		
 		tileSelectX = mouseX;
 		tileSelectY = mouseY;
 		System.out.println("Case selectionne");
 		System.out.println("Position: x= "+mouseX+" y = "+mouseY); 	// on affiche les coordonnées calculé de la souris
+		
+		if(action.getSelect() == false)
+		{
+			map.displayMap();
+			carte[tileSelectY][tileSelectX] = new MountainCase() ;
+			map.setCases(carte);
+		}		
 				
 	}
 	

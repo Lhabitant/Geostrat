@@ -1,13 +1,17 @@
 package fr.iutvalence.info.dut.m2107;
 
+import java.util.Random;
+
 public class Map {
 	
 	public final static int SIZE = 20;
     
     protected Case[][] cases= new Case[SIZE][SIZE];
     
+    Random r = new Random();
+    
 	/**
-	 * Initialized the map with forest case only
+	 * Initialized the map with different case
 	 * @param cases
 	 */
 	public Map() 
@@ -15,7 +19,23 @@ public class Map {
 		for (int i = 0 ; i < SIZE ; i++){
 			for (int j = 0 ; j < SIZE ; j++)
 			{
-				cases[i][j] = new ForestCase();
+				int valeur = 0 + r.nextInt(4 - 0); // generate a random number
+				if(valeur == 0)
+				{
+					cases[i][j] = new ForestCase(); 
+				}
+				if(valeur == 1)
+				{
+					cases[i][j] = new MountainCase();
+				}
+				if(valeur == 2)
+				{
+					cases[i][j] = new PlainCase();
+				}
+				if(valeur == 3)
+				{
+					cases[i][j] = new CityCase();
+				}
 			}
 		 }
 	}

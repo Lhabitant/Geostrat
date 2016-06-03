@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Random;
 
 
 
@@ -113,7 +114,35 @@ private final int NBRL = 23;
  * cote d'une case
  */
 private final int SPACE = 50;
+/**
+ * create a new action
+ */
 Action1 action = new Action1("test");
+/**
+ * create a new map 
+ */
+Map map = new Map();
+/**
+ * create a new tab
+ */
+Case[][] carte = map.getCases();
+/**
+ * it use for display the map
+ */
+ForestCase foret = new ForestCase();
+/**
+ * it use for display the map
+ */
+MountainCase montagne = new MountainCase();
+/**
+ * it use for display the map
+ */
+PlainCase plaine = new PlainCase();
+/**
+ * it use for display the map
+ */
+CityCase ville = new CityCase();
+
 
 
 /**
@@ -142,6 +171,50 @@ public void paintComponent(Graphics g){
 	  	g.setColor(Color.white);	//color of rect 
 	    g.fillRect(REALRECTX,REALRECTY,this.getWidth(),this.getHeight()-CALE);	//size of rect 
 	    
+	    
+	   
+	    for(int x = 0; x < 20; x++)
+	    {
+	    	
+	    	for(int y = 0; y < 20; y++)
+	    	{
+	    		//System.out.println(carte[x][y]);
+	    		/**
+	    		 * if the tile is a forest we display a forest
+	    		 */
+	    		if(carte[x][y].getType() == foret.getType())
+	    		{
+	    			g.setColor(Color.GREEN);	//color of rect 
+	    			g.fillRect(x*SPACE,y*SPACE,SPACE,SPACE);	//size of rect 
+	    		}
+	    		/**
+	    		 * if the tile is a mountain we display a mountain
+	    		 */
+	    		if(carte[x][y].getType() == montagne.getType())
+	    		{
+	    			g.setColor(Color.orange);	//color of rect 
+	    			g.fillRect(x*SPACE,y*SPACE,SPACE,SPACE);	//size of rect 
+	    		}
+	    		/**
+	    		 * if the tile is a plain we display a plain
+	    		 */
+	    		if(carte[x][y].getType() == plaine.getType())
+	    		{
+	    			g.setColor(Color.CYAN);	//color of rect 
+	    			g.fillRect(x*SPACE,y*SPACE,SPACE,SPACE);	//size of rect 
+	    		}
+	    		/**
+	    		 * if the tile is a city we display a city
+	    		 */
+	    		if(carte[x][y].getType() == ville.getType())
+	    		{
+	    			g.setColor(Color.magenta);	//color of rect 
+	    			g.fillRect(x*SPACE,y*SPACE,SPACE,SPACE);	//size of rect 
+	    		}
+	    	}
+	    }
+	    
+	    
 	    /**
 	     *  Création du tableau de jeu
 	     */
@@ -155,9 +228,7 @@ public void paintComponent(Graphics g){
 	    {
 	    	  g.drawLine(lY,0 ,lY,this.getHeight());	// on affiche les lignes
 	    	  lY = lY + SPACE;	// on déplace la prochaine ligne dee 50
-	    }
-	    
-	    
+	    }   
 	    
 	    /**
 	     * Création du rectangle info unite
@@ -203,11 +274,12 @@ public void paintComponent(Graphics g){
 		      g.drawImage(img, AUNITERECTX, AUNITERECTY, this);	// on affiche l'image
 		    } catch (IOException e) {
 		      e.printStackTrace(); 	// gestion de l'exception
-		    }         
-   
-	  
+		    }        
+	    
+	    
+	    
 	/**
-	 * Methode qui sert à afficher la case selectionné
+	 *sert à afficher la case selectionné
 	 */
 	if(action.getSelect() == false) //on utilise le bouton action 1 pour changer le selecteur
 	{
@@ -215,10 +287,13 @@ public void paintComponent(Graphics g){
 		int tes = InterfaceUtilisateur.getTileSelectY() * SPACE;	// on prend la valeur de la case selectionne en Y et on la multiplie par la taille
 		g.setColor(Color.blue);   //color
 	    g.fillRect(test,tes,50,50);	  //size
+	    
+	    
+	    
 	}
   
 	/**
-	 * Methode qui sert à afficher la case selectionné
+	 * sert à afficher la case selectionné
 	 */
 	if(action.getSelect() == true) //on utilise le bouton action 1 pour changer le selecteur
 	{
@@ -227,7 +302,8 @@ public void paintComponent(Graphics g){
 		g.setColor(Color.red);   //color
 	    g.fillRect(test,tes,50,50);	  //size
 	}
-  
+	
+	
 	repaint();
  
  // use for the oval, but no use at all
