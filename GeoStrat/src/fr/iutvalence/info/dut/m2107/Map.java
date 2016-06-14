@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Map {
 	
-	public final static int SIZE = 5;
+	public final static int SIZE = 20;
     
     protected Case[][] cases= new Case[SIZE][SIZE];
     
