@@ -2,7 +2,7 @@ package fr.iutvalence.info.dut.m2107;
 
 /**
  * @author VickFluchaire
- * This is an abstract class for
+ * This is an abstract class for case 
  */
 abstract class Case 
 {

@@ -29,7 +29,13 @@ public class VirtualCarte {
 //       	}
                
        
-        Map carte = new Map(); // appel constructeur qui va initialiser la carte via initCarte()
+        Map carte = new Map(); // Call to the constructor which will initialize the map with Map()
+		System.out.println();
+   	 	System.out.println("***************************************************************************************************************************************************************");
+   	 	System.out.println();
         carte.displayMap(); // affiche en console toute les cases : Type(Vitesse)
+        System.out.println();
+		System.out.println("***************************************************************************************************************************************************************");
+	
     }
 }
